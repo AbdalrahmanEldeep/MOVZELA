@@ -1,0 +1,11 @@
+.shadow{
+    width: 100%;
+    height: 80px;
+    z-index: 99;
+    bottom: 0;
+    position: absolute;
+}
+.shadow img{
+    width: 100%;
+    object-fit: cover;
+}

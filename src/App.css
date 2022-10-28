@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Tajawal', sans-serif;
+  transition: all ease .3s;
+}
+:root{
+  --main-color:#c03636;
+  --layer-color:#ff3e3eb2;
+  --dark-color: #0d151f;
+  --light-color:#2c3e50;
+  --white-color:#ecf0f1;
+  --white-color-place:#fafdfd7e;
+  --black-color:#0a0e13;
+  --active-color:#ffd32a;
+}
+body{
+  background-color: var(--dark-color);
+  height: 100vh;
+  overflow: hidden;
+}
+.d-flex-ev{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.d-flex-sp{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.d-flex-cn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-flex-c{
+  display: flex;
+  flex-direction: column;
+}
+.d-flex-r{
+  display: flex;
+  align-items: center;
+}
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-color);
+}
+*::-webkit-scrollbar{
+  width: 5px;
+  height: 10px;
+  background-color: var(--main-color);
+}
+*::-webkit-scrollbar-thumb{
+  background-color: var(--white-color);
+}

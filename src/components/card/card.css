@@ -1,0 +1,60 @@
+.Card .img-content .card-img{
+    width: 200px;
+    height: 300px;
+    position: relative;
+}
+.Card .img-content .card-img img{
+    width: 100%;
+    object-fit: cover;
+}
+.card-img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    background-color: var(--layer-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-image: url('../../../public/assets/play-outline.svg');
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 0;
+}
+.card-img:hover::after{
+    height: 100%;
+    cursor: pointer;
+}
+.Card .img-content .card-img img{
+    border-radius: 5px;
+}
+.Card .img-content .rate{
+    position: absolute;
+    left: 50%;
+    top: -5%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background-color: var(--active-color);
+    color: var(--white-color);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: 700;
+    z-index: 2;
+}
+.Card .img-content:hover .rate{
+    background-color: var(--main-color);
+}
+.Card .card-info{
+    margin-top: 20px;
+    color: var(--white-color);
+    font-weight: 500;
+}
+.Card .card-info .card-info-per{
+    color: var(--white-color-place);
+}
