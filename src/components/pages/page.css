@@ -4,7 +4,6 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 300;
-    background-color: var(--active-color);
 }
 .page-cont{
     display: flex;
@@ -25,15 +24,19 @@
 }
 @media screen and (min-width:200px) and (max-width:500px){
     .page-ele{
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
     }
     .page{
         bottom: 0;
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .break{
+        width: 25px;
+        height: 25px;
     }
 }
 .active{
@@ -49,7 +52,7 @@
     user-select: none;
 }
 .break{
-    background-color: var(--active-color);
+    background-color: var(--white-color);
     display: flex;
     justify-content: center;
     align-items: center;

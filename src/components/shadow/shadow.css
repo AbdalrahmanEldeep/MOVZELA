@@ -5,6 +5,11 @@
     bottom: 0;
     position: absolute;
 }
+@media screen and (min-width:200px) and (max-width:500px){
+    .shadow{
+        bottom: -8%;
+    }
+}
 .shadow img{
     width: 100%;
     object-fit: cover;

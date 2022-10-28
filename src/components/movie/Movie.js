@@ -3,7 +3,6 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
 import { useParams } from 'react-router-dom';
-import Jump from 'react-reveal/Jump';
 import { Reveal} from 'react-reveal';
 import { CircleLoader } from 'react-spinners';
 
@@ -39,7 +38,6 @@ export const Movie = () => {
       {
       data.backdrop_path ? 
        <Reveal bottom>
-        <Jump bottom className="movie-details">
           <div className='movie-img'><img src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`} /></div>
            <div className='movie-cont'>
                 <h1> {data.original_title} </h1>
@@ -55,7 +53,6 @@ export const Movie = () => {
                 <p> {data.overview} </p>
                 <button><a href={data.homepage} target="_blank">Watch Now</a></button>
             </div>
-        </Jump>
         </Reveal> : 
         <div className='loader'><CircleLoader size={100} className='Loading' color="#ffd32a" /></div>
       }
