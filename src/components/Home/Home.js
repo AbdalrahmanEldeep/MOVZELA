@@ -19,9 +19,9 @@ export const Home = () => {
     }
     
     { return data__loader.length > 0 ? <>
-    <Nav status = {change__state}  hidder={true}/>
+    <Nav status = {change__state}  slide__status = {slide__status} hidder={true}/>
     <div className='grid'>
-        <Side status={slide__status}/>
+        <Side status={slide__status} setSlide = {setSlide}/>
         {data.length > 1 ? <><Stack/><Shadow/><Page/></> :<NotFound/>}
      </div> 
     </> : <div className='loader'><CircleLoader size={100} className='Loading' color="#ffd32a" /></div>}

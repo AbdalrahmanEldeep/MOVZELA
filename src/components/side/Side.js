@@ -5,7 +5,7 @@ import { MainData } from '../context/Context';
 import './side.css';
 
 
-export const Side = ({status}) => {
+export const Side = ({status,setSlide}) => {
  let [act__index,setAct] = useState(0);
  let [list ,setList]= useState(['Home','Popular','Top rated','Coming soon'])
  let {change__base,change__page ,set__act} = useContext(MainData);
@@ -16,20 +16,25 @@ export const Side = ({status}) => {
     switch(e.target.innerText){
       case "Top rated":
          change__base('top_rated');
+         document.title ="TOP - RATED";
          change__page(1);
          break;
       case "Home":
           change__base('now_playing');
-         change__page(1);
+          change__page(1);
+         document.title ="MOVZILA";
           break;
       case "Coming soon":
             change__base('upcoming');
-         change__page(1);
+            change__page(1);
+            document.title ="COMING - SOON";
           break;
       case "Popular":
             change__page(2);
+            document.title ="POPULAR";
           break;
     }
+    setSlide(false);
  }
 
 

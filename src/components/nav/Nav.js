@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { MainData } from '../context/Context';
 import './nav.css';
 
-export const Nav = ({status,hidder}) => {
+export const Nav = ({status,hidder,slide__status}) => {
     let [inp__class,setInp] = useState(false);
     let {search__inp} = useContext(MainData);
 
@@ -15,11 +15,13 @@ export const Nav = ({status,hidder}) => {
 
     function slide__controller(){
         status();
+
     }
 
     function search(e){
         search__inp(e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1))
     }
+
   return (
     <div className='nav-container d-flex-r'>
         <div className='logo-search-inp d-flex-r'>
@@ -41,7 +43,9 @@ export const Nav = ({status,hidder}) => {
             </div>
             <div className='toggle-search'>
                 <img src='./assets/search-outline.svg'  onClick ={controller} width="30px" height="30px" />
-                <span style={{marginLeft:"30px"}} onClick={slide__controller} className='toggle'><img src='./assets/list-outline.svg' width="30px" height="30px" /></span>
+                <span style={{marginLeft:"30px",cursor:"pointer"}} onClick={slide__controller} className='toggle'>
+                     {!slide__status ?  <img src='./assets/List.png' width="30px" height="30px" /> :  <img src='./assets/close.png' width="30px" height="30px" />}
+                </span>
             </div>
            
            </> : <Link to='/' className='back-home'>Home</Link>

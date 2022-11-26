@@ -32,9 +32,7 @@ const ContextData = ({children}) => {
   let get__data = async () =>{
     let FetchAxios = await axios.get(`https://api.themoviedb.org/3/movie/${dataPath}?api_key=8d06129e09b7dfab7831b59a09bd99ae&query=black&language=en-US&page=${page}`);
     setData(FetchAxios.data.results);
-    if(!tester){
-      setPages(FetchAxios.data.total_pages);
-    }
+    setPages(FetchAxios.data.total_pages);
   }
 
   let Loader = async () =>{
