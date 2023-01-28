@@ -1,8 +1,10 @@
 import axios from 'axios';
+import { onAuthStateChanged } from 'firebase/auth';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react'
+import { auth, uploadUserPhoto } from '../../../firebase-init';
 
 let MainData = createContext();
 
@@ -15,8 +17,26 @@ const ContextData = ({children}) => {
   let [active__selection , setActSlc] = useState('Home');
   let [tester,setTester] = useState(null);
   let [img__base,setImageBase] = useState('https://image.tmdb.org/t/p/w500/');
+  const [userData,setUserData] = useState();
+  const [userfile,setUserFile] = useState();
+  const [userPhoto,setUserPhoto] = useState();
 
 
+  useEffect(() => {
+   const checkAuth = onAuthStateChanged(auth, (user) => {
+      setUserData(user);
+    });
+    return () => {
+      checkAuth();
+    }
+  },[])
+
+
+  useEffect(() => {
+    if(userData && userfile){
+      uploadUserPhoto(`${userData.uid}/${userfile.name}`,userfile);
+    }
+  },[userData])
 
   let set__act = (val) =>{
     setActSlc(val);
@@ -62,9 +82,13 @@ const ContextData = ({children}) => {
 
 
   return (
-    <MainData.Provider value={{data,change__base,img__base,change__page,search__inp,data__loader,set__act,active__selection,pages}}>
+    <MainData.Provider value={{data,change__base,img__base,change__page,search__inp,data__loader,set__act,active__selection,pages,userData,setUserFile,setUserPhoto,userPhoto}}>
         {children}
     </MainData.Provider>
   )
+
+
 }
+
 export {ContextData,MainData}
+

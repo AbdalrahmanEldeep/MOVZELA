@@ -16,13 +16,13 @@
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.6",
+    "react-toastify": "^9.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+      "start": "react-app-rewired start",
+      "build": "react-app-rewired build",
+      "test": "react-app-rewired test"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +43,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "customize-cra": "^1.0.0",
+    "gh-pages": "^4.0.0",
+    "react-app-rewired": "^2.2.1"
   }
 }

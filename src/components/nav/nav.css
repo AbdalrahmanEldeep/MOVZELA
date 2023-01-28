@@ -27,6 +27,7 @@
 }
 .nav-container .user-info{
     height: 100%;
+    width: 100%;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -35,11 +36,32 @@
 }
 .nav-container .user-info .user-img{
     position: absolute;
-    bottom: -50%;
+    right: 0;
+    bottom: -60%;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .nav-container .toggle-search{
     display: none;
+}
+.nav-container .toggle-search button{
+    padding: 10px 30px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.2rem;
+    transition: all ease .4s;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    text-align: center;
 }
 .nav-container .toggle-search .toggle{
     display: none;
@@ -69,7 +91,7 @@
         left: 50%;
         top: -100%;
         transform: translateX(-50%);
-        z-index: 100;
+        z-index: 100000;
     }
     .nav-container .logo-search-inp .inp-search-active{
         top: 10%;

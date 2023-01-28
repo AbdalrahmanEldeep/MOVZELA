@@ -2,32 +2,73 @@
     background-color: var(--black-color);
     height: 100%;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 .Slide ul{
-    margin-top: 50px;
     overflow: hidden;
+}
+.Slide ul .user-li{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin: 40px 0;
+    display: none;
+}
+.Slide ul .user-li .user-info .user-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 .Slide ul li{
     padding: 10px 30px;
     font-size: 1.1rem;
     margin: 10px 0;
     color: var(--white-color);
+    border-radius: 3px;
+    cursor: pointer;
 }
-.Slide ul li:not(.active-li):hover{
-    background-color: var(--dark-color);
+.Slide ul li:not(.active-li):not(.user-li):hover{
+    background-color: var(--main-color);
     transform: translateX(10px);
-    cursor: pointer;
-    cursor: pointer;
 }
 .Slide ul .active-li{
     font-weight: 600;
     background-color: var(--white-color);
     color: var(--main-color);
 }
+.Slide button{
+    padding: 10px 30px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.2rem;
+    margin-top: 100px;
+    transition: all ease .4s;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media screen  and (min-width:200px) and (max-width:820px){
     .Slide{
         position: fixed;
-        width: 35%;
+        width: 100%;
+        height: auto !important;
+    }
+    .Slide ul .user-li{
+        display: block;
+    }
+    .Slide button{
+        display: none;
     }
     .Slide:not(.active-slide){
         left: -100%;
@@ -38,6 +79,6 @@
 }
 @media screen  and (min-width:200px) and (max-width:440px){
     .Slide{
-        width: 50%;
+        width: 100%;
     }
 }
