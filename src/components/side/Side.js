@@ -7,7 +7,7 @@ import './side.css';
 
 export const Side = ({status,setSlide}) => {
  let [act__index,setAct] = useState(0);
- let [list ,setList]= useState(['Home','Popular','Top rated','Coming soon'])
+ let [list ,]= useState(['Home','Popular','Top rated','Coming soon'])
  let {change__base,change__page ,set__act} = useContext(MainData);
 
  let active__func = (e) =>{
@@ -33,6 +33,9 @@ export const Side = ({status,setSlide}) => {
             change__page(2);
             document.title ="POPULAR";
           break;
+      default:
+        change__page(0);
+        document.title ="Home - Page";
     }
     setSlide(false);
  }
@@ -42,7 +45,7 @@ export const Side = ({status,setSlide}) => {
     <div className={!status ? "Slide" : "Slide active-slide"}>
         <ul>
             {list.map((e,index) => {
-               return <li  onClick={active__func} key={index} className = {index == act__index ? "active-li" : null}>{e}</li>
+               return <li  onClick={active__func} key={index} className = {index === act__index ? "active-li" : null}>{e}</li>
             })}
         </ul>
     </div>

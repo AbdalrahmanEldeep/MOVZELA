@@ -20,7 +20,7 @@ export const Home = () => {
     }
     
     // eslint-disable-next-line no-lone-blocks
-    { return data__loader.length > 0 ? <>
+    { return !data__loader.length > 0 ? <>
     <Nav status = {change__state}  slide__status = {slide__status} hidder={true}/>
     <div className='grid'>
         <Side status={slide__status} setSlide = {setSlide}/>

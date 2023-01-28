@@ -25,11 +25,11 @@ export const Nav = ({status,hidder,slide__status}) => {
   return (
     <div className='nav-container d-flex-r'>
         <div className='logo-search-inp d-flex-r'>
-            <div className='logo-img'><img src='../../../assets/Logo.svg'  width="80px" height="80px"/></div>
+            <div className='logo-img'><img src='../../../assets/Logo.svg'  width="80px" height="80px" alt='img'/></div>
             {hidder ? <>
             <div className={!inp__class ? "inp-search d-flex-r" : "inp-search inp-search-active d-flex-r"}>
                 <form>
-                    <img src='./assets/search-outline.svg' className='search-icon' width="30px" height="30px"/>
+                    <img src='./assets/search-outline.svg' className='search-icon' width="30px" height="30px" alt='img'/>
                     <input onChange={search} type="text"  placeholder='search movies...'/>
                 </form>
             </div>
@@ -39,12 +39,12 @@ export const Nav = ({status,hidder,slide__status}) => {
            hidder ? <>
             <div className='user-info d-flex-c'>
                 <div className='user-name'>Black Wolf</div>
-                <div className='user-img'><img src='assets/user.png' width="60px" height="60px"/></div>
+                <div className='user-img'><img src='assets/user.png' width="60px" height="60px" alt='img'/></div>
             </div>
             <div className='toggle-search'>
-                <img src='./assets/search-outline.svg'  onClick ={controller} width="30px" height="30px" />
+                <img src='./assets/search-outline.svg'  onClick ={controller} width="30px" height="30px" alt='img'/>
                 <span style={{marginLeft:"30px",cursor:"pointer"}} onClick={slide__controller} className='toggle'>
-                     {!slide__status ?  <img src='./assets/List.png' width="30px" height="30px" /> :  <img src='./assets/close.png' width="30px" height="30px" />}
+                     {!slide__status ?  <img src='./assets/List.png' width="30px" height="30px" alt='img'/> :  <img src='./assets/close.png' width="30px" height="30px" alt='img'/>}
                 </span>
             </div>
            

@@ -24,9 +24,9 @@
 }
 @media screen and (min-width:200px) and (max-width:500px){
     .page-ele{
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
     }
     .page{
         bottom: 0;

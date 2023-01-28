@@ -2,7 +2,6 @@ import React ,{ useState } from 'react'
 import { useContext } from 'react'
 import { CircleLoader } from 'react-spinners';
 import  {MainData} from '../context/Context';
-import { Loader } from '../Loader/Loader';
 import { Nav } from '../nav/Nav';
 import { NotFound } from '../NotFound/NotFound';
 import { Page } from '../pages/Page';
@@ -26,5 +25,5 @@ export const Home = () => {
         <Side status={slide__status} setSlide = {setSlide}/>
         {data.length > 1 ? <><Stack/><Shadow/><Page/></> :<NotFound/>}
      </div> 
-    </> : <div className='loader'><Loader/></div>}
+    </> : <div className='loader'><CircleLoader size={100} className='Loading' color="#ffd32a" /></div>}
 }
