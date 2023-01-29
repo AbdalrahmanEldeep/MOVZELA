@@ -1,15 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { auth, SignInUser } from '../../../firebase-init';
 import "./LoginPage.css";
 
 export default function LoginPage() {
 
 
-  const SignInExistUser = (e) => {
+  const SignInExistUser = async (e) => {
     e.preventDefault();
     const [email,password] = e.target;
-    SignInUser(auth,email.value,password.value);
+    SignInUser(auth,email.value,password.value).then((e) => {
+      if(e === "auth/user-not-found"){
+        toast.warn("This User Not Exist Please Sign in !", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
+    })
   }
 
   return(

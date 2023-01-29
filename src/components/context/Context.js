@@ -18,8 +18,6 @@ const ContextData = ({children}) => {
   let [tester,setTester] = useState(null);
   let [img__base,setImageBase] = useState('https://image.tmdb.org/t/p/w500/');
   const [userData,setUserData] = useState();
-  const [userfile,setUserFile] = useState();
-  const [userPhoto,setUserPhoto] = useState();
 
 
   useEffect(() => {
@@ -31,12 +29,6 @@ const ContextData = ({children}) => {
     }
   },[])
 
-
-  useEffect(() => {
-    if(userData && userfile){
-      uploadUserPhoto(`${userData.uid}/${userfile.name}`,userfile);
-    }
-  },[userData])
 
   let set__act = (val) =>{
     setActSlc(val);
@@ -82,7 +74,7 @@ const ContextData = ({children}) => {
 
 
   return (
-    <MainData.Provider value={{data,change__base,img__base,change__page,search__inp,data__loader,set__act,active__selection,pages,userData,setUserFile,setUserPhoto,userPhoto}}>
+    <MainData.Provider value={{data,change__base,img__base,change__page,search__inp,data__loader,set__act,active__selection,pages,userData}}>
         {children}
     </MainData.Provider>
   )

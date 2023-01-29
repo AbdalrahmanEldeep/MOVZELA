@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { auth, createNewUsers, uploadUserPhoto } from "../../../firebase-init";
-import { MainData } from "../context/Context";
+import { auth, createNewUsers } from "../../../firebase-init";
 import "./SigninPage.css";
 
 export default function SigninPage() {
 
-  const {setUserFile} = useContext(MainData)
+  const [userFile,setUserFile] = useState();
 
 
   const message = (mess) => {
@@ -46,7 +45,16 @@ export default function SigninPage() {
     }else if(input_5.value === ""){
       message("Please upload your amazing photo");
     }else{
-      createNewUsers(auth,input_2.value,input_3.value);
+      createNewUsers(auth,input_2.value,input_3.value,userFile).then((e) => {
+         if(e == "auth/email-already-in-use"){
+            message("This is User Exist !");
+            input_1.value = "";
+            input_2.value = "";
+            input_3.value = "";
+            input_4.value = "";
+            input_5.value = "";
+         }
+      })
     }
   }
 
