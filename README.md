@@ -10,7 +10,7 @@
 
 
 
-## MOVZELA Diagrams
+## [MOVZELA](https://movzila.web.app/) Diagrams
 
 In this part you will see a simple diagram of the components of the project 
 
@@ -26,7 +26,7 @@ Home--> MovieRoute: On Click Get One Movie With ID
 MovieRoute->MovieComponent: Show The Movie
 ```
 
-And this will produce a flow chart:
+[MOVZELA](https://movzila.web.app/) Flow Chart:
 
 ```mermaid
 graph LR
