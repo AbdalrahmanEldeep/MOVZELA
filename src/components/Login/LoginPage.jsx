@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { PropagateLoader	 } from 'react-spinners';
 import { toast } from 'react-toastify';
 import { auth, SignInUser } from '../../../firebase-init';
 import "./LoginPage.css";
 
 export default function LoginPage() {
 
+  const [loaderState,setLoaderState] = useState(false);
   function warning (mess){
     toast.warn(mess, {
       position: "top-right",
@@ -26,8 +28,10 @@ export default function LoginPage() {
     if(email.value === "" || password.value === ""){
       warning("Please Enter Your Email & Password")
     }else{
+      setLoaderState(true);
       SignInUser(auth,email.value,password.value).then((e) => {
         if(e === "auth/user-not-found"){
+          setLoaderState(false)
           warning("This User Not Exist Please Sign in !");
         }
       })
@@ -37,6 +41,17 @@ export default function LoginPage() {
   return(
   <div className="form-container">
     <form onSubmit={SignInExistUser}>
+      <div style={{display:loaderState ? "block" : "none"}}>
+        <PropagateLoader	
+        height="80"
+        width="80"
+        ariaLabel="progress-bar-loading"
+        wrapperStyle={{}}
+        wrapperClass="progress-bar-wrapper"
+        borderColor = '#F4442E'
+        barColor = '#51E5FF'
+      />
+      </div>
       <div className="logo">
         <img src="./assets/Logo.png" alt="" />
         <p>MO<strong>V</strong>ZEL<strong>A</strong></p>

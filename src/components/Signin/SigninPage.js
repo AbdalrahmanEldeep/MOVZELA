@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { PropagateLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import { auth, createNewUsers } from "../../../firebase-init";
 import "./SigninPage.css";
 
 export default function SigninPage() {
+
+  const [loaderState,setLoaderState] = useState(false);
 
   const [userFile,setUserFile] = useState();
 
@@ -45,6 +48,7 @@ export default function SigninPage() {
     }else if(input_5.value === ""){
       message("Please upload your amazing photo");
     }else{
+      setLoaderState(true);
       createNewUsers(auth,input_2.value,input_3.value,userFile).then((e) => {
          if(e == "auth/email-already-in-use"){
             message("This is User Exist !");
@@ -53,6 +57,7 @@ export default function SigninPage() {
             input_3.value = "";
             input_4.value = "";
             input_5.value = "";
+            setLoaderState(false);
          }
       })
     }
@@ -62,6 +67,17 @@ export default function SigninPage() {
   return (
     <div className="form-container">
       <form onSubmit={ApepndNewUser}>
+      <div style={{display:loaderState ? "block" : "none"}}>
+      <PropagateLoader	
+        height="80"
+        width="80"
+        ariaLabel="progress-bar-loading"
+        wrapperStyle={{}}
+        wrapperClass="progress-bar-wrapper"
+        borderColor = '#F4442E'
+        barColor = '#51E5FF'
+      />
+      </div>
         <div className="logo">
           <img src="./assets/Logo.png" alt="" />
           <p>MO<strong>V</strong>ZEL<strong>A</strong></p>

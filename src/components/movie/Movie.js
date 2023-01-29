@@ -10,6 +10,7 @@ import { CircleLoader } from 'react-spinners';
 
 
 import "./movie.css";
+import { Loader } from '../Loader/Loader';
 
 export const Movie = () => {
 
@@ -54,7 +55,7 @@ export const Movie = () => {
                 <button><a href={data.homepage} target="_blank">Watch Now</a></button>
             </div>
         </Reveal> : 
-        <div className='loader'><CircleLoader size={100} className='Loading' color="#ffd32a" /></div>
+        <div className='loader'><Loader/></div>
       }
      </div>
     </div>

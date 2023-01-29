@@ -22,7 +22,7 @@ export const Loader = () => {
         <span></span>
         <span></span>
       </div>
-      <h1 className="loader-header"><strong>Load</strong> <strong style={{color:"var(--active-color)"}}>Movies...</strong> </h1>
+      <h1 className="loader-header"><strong>Load</strong> <strong style={{color:"var(--active-color)"}}>Move...</strong> </h1>
     </>
   );
 };

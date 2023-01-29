@@ -38,7 +38,7 @@ export const Nav = ({status,hidder,slide__status}) => {
            hidder ? <>
             <div className='user-info d-flex-c'>
                 <div className='user-img'>
-                    <img style={{borderRadius:"60px"}} src={userData.photoURL ?  userData.photoURL : "assets/user.png"} width="60px" height="60px" alt='img'/>
+                    <img style={{borderRadius:"60px",backgroundColor:"#fff"}} src={userData.photoURL ?  userData.photoURL : "assets/user.png"} width="60px" height="60px" alt='img'/>
                     <div className='user-name'>{userData.email}</div>
                 </div>
             </div>

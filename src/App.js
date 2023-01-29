@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
            <Route path='/'  element={<RouteProtceter status={userData}><Home/></RouteProtceter>}/>
-           <Route path='/movie/:id'  element={<><Nav hidder={false}/><Movie/></>}/>
+           <Route path='/movie/:id'  element={<RouteProtceter><><Nav hidder={false}/><Movie/></></RouteProtceter>}/>
            <Route path='/signin' element={<AuthRouteProtceter status={userData}><SigninPage/></AuthRouteProtceter>}/>
            <Route path='/login' element={<AuthRouteProtceter status={userData}><LoginPage/></AuthRouteProtceter>}/>
         </Routes>
