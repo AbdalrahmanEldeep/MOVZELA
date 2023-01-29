@@ -40,7 +40,7 @@ export const createNewUsers = async (auth,email,password,file) => {
   .then((userCredential) => {
     const user = userCredential.user;
 
-      const storageRef = ref(storage, file.name);
+      const storageRef = ref(storage,`${user.uid}/${file.name}`);
     
       const uploadTask = uploadBytesResumable(storageRef, file);
     

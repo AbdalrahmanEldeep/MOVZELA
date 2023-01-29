@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useContext } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SignOutUserPage } from '../../../firebase-init';
 import { MainData } from '../context/Context';
 import './nav.css';
 
@@ -42,7 +43,7 @@ export const Nav = ({status,hidder,slide__status}) => {
                 </div>
             </div>
             <div className='toggle-search'>
-             <button><img height={35} width={35} src="./assets/logout.png" alt="" /></button>
+             <button onClick={() => SignOutUserPage()}><img height={35} width={35} src="./assets/logout.png" alt="" /></button>
                 <img src='./assets/search-outline.svg'  onClick ={controller} width="30px" height="30px" alt='img'/>
                 <span style={{marginLeft:"30px",cursor:"pointer"}} onClick={slide__controller} className='toggle'>
                      {!slide__status ?  <img src='./assets/List.png' width="30px" height="30px" alt='img'/> :  <img src='./assets/close.png' width="30px" height="30px" alt='img'/>}

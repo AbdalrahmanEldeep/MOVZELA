@@ -8,7 +8,7 @@ import "./side.css";
 export const Side = ({ status, setSlide }) => {
   let [act__index, setAct] = useState(0);
   let [list] = useState(["Home", "Popular", "Top rated", "Coming soon"]);
-  let { change__base, change__page, set__act ,userData,userPhoto} = useContext(MainData);
+  let { change__base, change__page, set__act ,userData} = useContext(MainData);
 
   let active__func = (e) => {
     setAct(list.indexOf(e.target.innerText));
@@ -52,8 +52,8 @@ export const Side = ({ status, setSlide }) => {
           <div className="user-info d-flex-c">
               <div className="user-img">
                 <img
-                  style={{ borderRadius: "60px" }}
-                  src={userPhoto ? userPhoto : "assets/user.png"}
+                  style={{ borderRadius: "60px" ,backgroundColor:"#fff" }}
+                  src={userData.photoURL ? userData.photoURL : "assets/user.png"}
                   width="60px"
                   height="60px"
                   alt="img"

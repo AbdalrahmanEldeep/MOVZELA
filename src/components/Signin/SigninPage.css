@@ -76,7 +76,13 @@
     .form-container form{
         height: 100%;
         width: 100%;
+        padding: 30px !important;
         justify-content: center !important;
         align-items: center !important;
+    }
+    .form-container form button:hover{
+        transform: scale(1);
+        background-color: var(--active-color);
+        color: var(--dark-color);
     }
 }
