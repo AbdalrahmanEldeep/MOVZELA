@@ -1,7 +1,5 @@
 
-<img src="https://avatars.githubusercontent.com/u/1335026?s=200&v=4">
-
-<p align="center"><a href="https://firebase.google.com" target="_blank"><img src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-built_white.png" width="400"></a></p><p align="center">
+<p align="center"><a href="https://firebase.google.com" target="_blank"><img src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-built_white.png" width="600"></a></p><p align="center">
   
 ## Tools & Technology
 
