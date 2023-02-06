@@ -1,7 +1,8 @@
 
 <img src="https://avatars.githubusercontent.com/u/1335026?s=200&v=4">
 
-
+<p align="center"><a href="https://firebase.google.com" target="_blank"><img src="https://avatars.githubusercontent.com/u/1335026?s=200&v=4" width="400"></a></p><p align="center">
+  
 ## Tools & Technology
 
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
