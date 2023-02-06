@@ -1,5 +1,5 @@
 
-<img src="https://avatars.githubusercontent.com/u/1335026?s=200&v=4">
+<img src="https://avatars.githubusercontent.com/u/1335026?s=200&v=4" width="600px" height="600px">
 
 
 ## Tools & Technology
