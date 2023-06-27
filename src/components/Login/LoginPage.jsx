@@ -45,7 +45,7 @@ export default function LoginPage() {
         <PropagateLoader	
         height="80"
         width="80"
-        ariaLabel="progress-bar-loading"
+        aria-label="progress-bar-loading"
         wrapperStyle={{}}
         wrapperClass="progress-bar-wrapper"
         borderColor = '#F4442E'

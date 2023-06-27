@@ -4,25 +4,28 @@ import "./Loader.css";
 export const Loader = () => {
   return (
     <>
-      <div class="body">
+      <div className="body">
         <span>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </span>
-        <div class="base">
+        <div className="base">
           <span></span>
-          <div class="face"></div>
+          <div className="face"></div>
         </div>
       </div>
-      <div class="longfazers">
+      <div className="longfazers">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <h1 className="loader-header"><strong>Load</strong> <strong style={{color:"var(--active-color)"}}>Move...</strong> </h1>
+      <h1 className="loader-header">
+        <strong>Load</strong>{" "}
+        <strong style={{ color: "var(--active-color)" }}>Move...</strong>{" "}
+      </h1>
     </>
   );
 };
