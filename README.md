@@ -1,12 +1,8 @@
-<p align="center">
   <a href="https://firebase.google.com" target="_blank">
-    <img width="300px" height="300px" src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-built_white.png" width="600">
+    <img src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-built_white.png" width="600">
   </a>
-</p>
 
-<p align="center">
 
-## Tools & Technology
 
 ## Tools & Technology
 
@@ -24,7 +20,6 @@
 | Google Chrome   | ![Chrome](https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white) |
 
 
-</p>
 
 | Partition      | Technology                            |
 | -------------- | ------------------------------------- |
