@@ -59,4 +59,3 @@ k --> D
 s --> D
 ```
 
-Please note that the shields and badges may not display correctly on all platforms or Markdown viewers.
