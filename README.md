@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://firebase.google.com" target="_blank">
-    <img src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-built_white.png" width="600">
+    <img width="300px" height="300px" src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-built_white.png" width="600">
   </a>
 </p>
 
