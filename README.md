@@ -2,7 +2,6 @@
 
 # MOVZELA
 
-MOVZELA is an innovative online platform that provides a wide range of movies, along with detailed descriptions, images, and video links. With MOVZELA, movie enthusiasts can explore an extensive collection of films from various genres and easily access all the information they need to make informed viewing decisions.
 
 ## Features:
 
