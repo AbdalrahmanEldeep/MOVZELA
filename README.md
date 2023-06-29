@@ -2,53 +2,6 @@
 
 # MOVZELA
 
-## Tools & Technology
-
-<div style="display: flex; flex-wrap: wrap;">
-  <div style="flex-basis: 50%;">
-    <strong>Technology</strong>
-  </div>
-  <div style="flex-basis: 50%;">
-    <strong>Description</strong>
-  </div>
-
-  <div style="flex-basis: 50%;">CSS3</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></div>
-
-  <div style="flex-basis: 50%;">Sass</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass"></div>
-
-  <div style="flex-basis: 50%;">JavaScript</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript"></div>
-
-  <div style="flex-basis: 50%;">HTML5</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></div>
-
-  <div style="flex-basis: 50%;">GitHub</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></div>
-
-  <div style="flex-basis: 50%;">Google Chrome</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white" alt="Google Chrome"></div>
-
-  <div style="flex-basis: 50%;">React.js</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React.js"></div>
-
-  <div style="flex-basis: 50%;">Firebase</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase"></div>
-
-  <div style="flex-basis: 50%;">Redux</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux"></div>
-
-  <div style="flex-basis: 50%;">RESTful API</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/RESTful_API-FF7F7F?style=for-the-badge" alt="RESTful API"></div>
-
-  <div style="flex-basis: 50%;">React Framer Motion</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/React_Framer_Motion-E21F26?style=for-the-badge" alt="React Framer Motion"></div>
-
-  <div style="flex-basis: 50%;">React Baggage</div>
-  <div style="flex-basis: 50%;"><img src="https://img.shields.io/badge/React_Baggage-0088CC?style=for-the-badge" alt="React Baggage"></div>
-
-</div>
 
 
 
